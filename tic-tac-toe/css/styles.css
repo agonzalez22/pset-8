@@ -147,7 +147,6 @@ table, th, td {
   padding: 10px;
 }
 #buttonO, #buttonX{
-  background-color: white;
   border: 1px solid black;
   color: black;
   font-size: 15px;
@@ -157,7 +156,6 @@ table, th, td {
   width: 30px;
 }
 #score-reset {
-  background-color: white;
   border: 1px solid black;
   color: black;
   font-size: 18px;
@@ -167,4 +165,7 @@ table, th, td {
   width: 150px;
   float: right;
 
+}
+.selected {
+  background-color: green;
 }
