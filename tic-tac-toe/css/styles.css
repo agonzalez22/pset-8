@@ -101,7 +101,6 @@ h2 {
 .img2:hover {
   cursor: pointer;
   background-image: url("../img/mantis2.jpg");
-  display: block;
 }
 
 /*
