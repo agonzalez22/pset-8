@@ -98,6 +98,10 @@ h2 {
   cursor: pointer;
   background-image: url("../img/mantis.jpg");
 }
+.img2:hover {
+  cursor: pointer;
+  background-image: url("../img/mantis2.jpg");
+}
 
 /*
  * The reset button sits just below the board.
