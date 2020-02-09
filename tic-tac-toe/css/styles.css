@@ -122,6 +122,10 @@ h2 {
   cursor: pointer;
   background-image: url("../img/mantis7.jpg");
 }
+.img8:hover {
+  cursor: pointer;
+  background-image: url("../img/mantis8.jpg");
+}
 /*
  * The reset button sits just below the board.
  */
@@ -190,5 +194,5 @@ table, th, td {
 
 }
 .selected {
-  background-color: green;
+  background-color: #8BD291;
 }
