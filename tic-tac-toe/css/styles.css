@@ -42,6 +42,21 @@ h2 {
   align-items: center;     /* center content vertically */
 }
 
+
+.textcontainer {
+  display: flex;           /* set our display property to use flex-box */
+  justify-content: center; /* center container horizontally */
+  align-items: center;     /* center content vertically */
+}
+
+.textcell {
+  border: 0px solid rgba(0, 0, 0, 0.75);
+  height: 40px;
+  user-select: none;
+  width: 350px;
+}
+
+
 /*
  * We want to display the subheader, board, and reset button in a single
  * vertical column.
@@ -104,7 +119,7 @@ h2 {
  * switches (background and foreground).
  */
 
-#reset-button:hover {
+#reset-button:hover, #score-reset:hover, #buttonO:hover, #buttonX:hover {
   background-color: black;
   color: white;
   cursor: pointer;
@@ -116,4 +131,40 @@ h2 {
   line-height: 150px;
   user-select: none;
   width: 150px;
+}
+table, th, td {
+  padding: 10px;
+  border-collapse: collapse;
+  border: 2px solid;
+  font-family: "Roboto", monospace;
+  font-size: 36px;
+  border-color: lightgray;
+}
+.right {
+  position: absolute;
+  right: 0px;
+  width: 500px;
+  padding: 10px;
+}
+#buttonO, #buttonX{
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-size: 15px;
+  line-height: 25px;
+  margin: 1%;
+  text-align: center;
+  width: 30px;
+}
+#score-reset {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 1%;
+  text-align: center;
+  width: 150px;
+  float: right;
+
 }
