@@ -94,9 +94,9 @@ h2 {
  * And we give it a little flare when the user mouses over a square.
  */
 
-.square:hover {
-  background-color: lightgray;
+.img1:hover {
   cursor: pointer;
+  background-image: url("../img/mantis.jpg");
 }
 
 /*
