@@ -21,7 +21,7 @@ let scoreO = 0;
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 
 const squares = Array.from(document.querySelectorAll("#board div"));
-const message = document.querySelector("h2");   // grab the subheader
+const message = document.querySelector("h2"); // grab the subheader
 
 ///////////////////// EVENT LISTENERS ///////////////////////////////
 
@@ -48,17 +48,18 @@ function init() {
   gameStarted = false;
   document.getElementById("buttonO").classList.remove("selected");
   document.getElementById("buttonX").classList.remove("selected");
-  render();   // we'll write this later
+  render(); // we'll write this later
 }
+
 function render() {
   board.forEach(function(mark, index) {
     squares[index].textContent = mark;
   });
 
-  if (win == "X"){
+  if (win == "X") {
     scoreX = scoreX + 1;
     document.getElementById("player-scoreX").innerHTML = scoreX;
-  } else if (win == "O"){
+  } else if (win == "O") {
     scoreO = scoreO + 1;
     document.getElementById("player-scoreO").innerHTML = scoreO;
   }
@@ -66,6 +67,7 @@ function render() {
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
 }
+
 function takeTurn(e) {
   gameStarted = true;
   if (!win) {
@@ -82,6 +84,7 @@ function takeTurn(e) {
     }
   }
 }
+
 function getWinner() {
   let winner = null;
 
@@ -97,21 +100,23 @@ function getWinner() {
 
   return winner ? winner : board.includes("") ? null : "T";
 }
-function startPlayer(e){
+
+function startPlayer(e) {
   if (gameStarted) return;
 
-  if (e.id == "buttonX"){
+  if (e.id == "buttonX") {
     turn = "X";
     document.getElementById("turn-header").innerHTML = "Turn: X";
     document.getElementById("buttonO").classList.remove("selected");
     document.getElementById(e.id).classList.add("selected");
-  }else{
+  } else {
     turn = "O";
     document.getElementById(e.id).classList.add("selected");
     document.getElementById("buttonX").classList.remove("selected");
     document.getElementById("turn-header").innerHTML = "Turn: O";
   }
 }
+
 function resetScore() {
   init();
   scoreX = 0;
